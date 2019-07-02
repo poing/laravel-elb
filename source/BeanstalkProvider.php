@@ -10,6 +10,8 @@ use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Poing\Beanstalk\Middleware\ElasticBeanstalkHttps;
+use Poing\Beanstalk\Commands\BeanstalkInstall;
+
 use Poing\Beanstalk\Middleware\HttpsProtocol;
 
 class BeanstalkProvider extends ServiceProvider {
@@ -31,6 +33,13 @@ class BeanstalkProvider extends ServiceProvider {
         // Add to middleware stack.
         $router->pushMiddlewareToGroup('web', ElasticBeanstalkHttps::class);
         $router->pushMiddlewareToGroup('web', HttpsProtocol::class);
+
+        // Load Commands
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                BeanstalkInstall::class,
+            ]);
+        }
 
     }
 
