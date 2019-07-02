@@ -16,7 +16,7 @@ composer require poing/laravel-elb
 
 `psr-4` autoload *-and-* automatic registration of the `ServiceProvider` handle loading the middleware *automatically*.  
 
-*No additional steps are necessary.* 
+*No additional steps are necessary.  **Except** on the [Elastic Beanstalk Load Balancer](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-elb.html) side.* 
 
 ## Usage
 
