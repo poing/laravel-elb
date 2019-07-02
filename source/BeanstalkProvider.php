@@ -8,7 +8,7 @@ use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
-//use Poing\Beanstalk\Middleware\ElasticBeanstalkHttps;
+use Poing\Beanstalk\Middleware\ElasticBeanstalkHttps;
 //use Poing\Beanstalk\Middleware\HttpsProtocol;
 use Illuminate\Routing\Router;
 
@@ -32,7 +32,7 @@ class BeanstalkProvider extends ServiceProvider {
         $router = $this->app['router'];
     
         //$router->aliasMiddleware('elb.redirect', HttpsProtocol::class);
-        $router->aliasMiddleware('elb.https', Poing\Beanstalk\Middleware\ElasticBeanstalkHttps::class);
+        $router->aliasMiddleware('elb.https', ElasticBeanstalkHttps::class);
 
         //$kernel->prependMiddleware(HttpsProtocol::class);
         //$kernel->prependMiddleware(ElasticBeanstalkHttps::class); 
