@@ -8,7 +8,9 @@
             "email": "brian.lavallee@invite-comm.jp"
         }
     ],
-    "require": {},
+    "require": {
+        "laravel/framework": ">=5.4"
+    },
     "autoload": {
         "psr-4": {
           "Poing\\Beanstalk\\": "source/"
