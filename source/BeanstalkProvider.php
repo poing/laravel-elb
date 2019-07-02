@@ -32,7 +32,7 @@ class BeanstalkProvider extends ServiceProvider {
      */
     public function boot(Router $router)
     {
-        parent::boot($router);
+        //parent::boot($router);
 
         foreach($this->middleware as $name => $class) {
             $this->middleware($name, $class);
