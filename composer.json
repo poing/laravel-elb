@@ -1,0 +1,30 @@
+{
+    "name": "poing/laravel-elb",
+    "description": "Laravel Middleware for AWS Elastic Beanstalk HTTPS Support",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brian LaVallee",
+            "email": "brian.lavallee@invite-comm.jp"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+          "Poing\\Beanstalk\\": "source/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+          "Beanstalk\\Test\\": "test/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Poing\\Beanstalk\\BeanstalkProvider"
+            ]
+        }
+    }
+}
