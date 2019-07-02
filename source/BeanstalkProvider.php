@@ -28,7 +28,7 @@ class BeanstalkProvider extends ServiceProvider {
      */
     public function boot(Router $router) {
     
-        //$router = $this->app['router'];
+        // Add to middleware stack.
         $router->pushMiddlewareToGroup('web', ElasticBeanstalkHttps::class);
         $router->pushMiddlewareToGroup('web', HttpsProtocol::class);
 
@@ -42,8 +42,8 @@ class BeanstalkProvider extends ServiceProvider {
     public function register() {
 
         // Default Package Configuration
-        //$this->mergeConfigFrom(__DIR__.'/config/default.php', 'wombat');
-        //$this->mergeConfigFrom(__DIR__.'/config/wombat.php', 'wombat');
+        //$this->mergeConfigFrom(__DIR__.'/config/default.php', 'elb');
+        //$this->mergeConfigFrom(__DIR__.'/config/elb.php', 'elb');
 
     }
 
