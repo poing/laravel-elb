@@ -8,6 +8,8 @@ Recognizing **secure** requests is *based* on the [gist](https://gist.github.com
 
 This package *eliminates* the necessity of using `.ebextensions` to handle `HTTP` to `HTTPS` redirection with the Apache `RewriteEngine` method.  While allowing *some* traffic **not** to be redirected, *such as the Elastic Beanstalk HealthChecker*.
 
+> This package is the result of *frustration* trying to get the correct `RewriteCond` rules to **exclude** multiple conditions using the `.ebextensions` method.  Handling the `HTTP` to `HTTPS` redirection with Laravel provided more *flexibility* with less headaches.
+
 ## Installation
 You can install this package using [Composer](https://getcomposer.org/)
 ```
