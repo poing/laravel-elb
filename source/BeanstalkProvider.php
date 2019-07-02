@@ -2,6 +2,7 @@
 
 namespace Poing\Beanstalk;
 
+use Illuminate\Routing\Router;
 use Illuminate\Database\Eloquent\Factory as EloquentFactory;
 use Illuminate\Http\Resources\Json\Resource;
 use Illuminate\Support\Facades\Schema;
@@ -19,18 +20,23 @@ class BeanstalkProvider extends ServiceProvider {
      */
     protected $defer = false;
 
+    protected $middleware = [
+        'elb-https' => ElasticBeanstalkHttps::class,
+        'elb-redirect' => HttpsProtocol::class,
+    ];
+
     /**
      * Bootstrap the application events.
      *
      * @return void
      */
-    public function boot() {
+    public function boot(Router $router)
+    {
+        parent::boot($router);
 
-        //$this->app->middleware([ElasticBeanstalkHttps::class]);
-        //$this->app->middleware([HttpsProtocol::class]);
-
-$this->app['router']->aliasMiddleware('elb-https', ElasticBeanstalkHttps::class);
-$this->app['router']->aliasMiddleware('elb-redirect', HttpsProtocol::class);
+        foreach($this->middleware as $name => $class) {
+            $this->middleware($name, $class);
+        }
     }
 
     /**
