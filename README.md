@@ -9,12 +9,14 @@ Recognizing **secure** requests is *based* on the [gist](https://gist.github.com
 This package *eliminates* the necessity of using `.ebextensions` to handle `HTTP` to `HTTPS` redirection with the Apache `RewriteEngine` method.  While allowing *some* traffic **not** to be redirected, *such as the Elastic Beanstalk HealthChecker*.
 
 ## Installation
-You can install this middleware through [Composer](https://getcomposer.org/)
+You can install this package using [Composer](https://getcomposer.org/)
 ```
 composer require poing/laravel-elb
 ```
 
-`psr-4` autoload *-and-* automatic registration of the `ServiceProvider` handle loading the middleware *automatically*.  *No additional steps are necessary.* 
+`psr-4` autoload *-and-* automatic registration of the `ServiceProvider` handle loading the middleware *automatically*.  
+
+*No additional steps are necessary.* 
 
 ## Usage
 
