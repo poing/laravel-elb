@@ -2,15 +2,15 @@
 
 namespace Poing\Beanstalk;
 
+//use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Database\Eloquent\Factory as EloquentFactory;
+use Illuminate\Foundation\AliasLoader;
 use Illuminate\Http\Resources\Json\Resource;
-use Illuminate\Contracts\Http\Kernel;
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Foundation\AliasLoader;
 use Poing\Beanstalk\Middleware\ElasticBeanstalkHttps;
-//use Poing\Beanstalk\Middleware\HttpsProtocol;
-use Illuminate\Routing\Router;
+use Poing\Beanstalk\Middleware\HttpsProtocol;
 
 class BeanstalkProvider extends ServiceProvider {
 
@@ -26,22 +26,11 @@ class BeanstalkProvider extends ServiceProvider {
      *
      * @return void
      */
-    //public function boot() {
-    public function boot() {
+    public function boot(Router $router) {
     
-        $router = $this->app['router'];
-    
-        //$router->aliasMiddleware('elb.redirect', HttpsProtocol::class);
-        $router->aliasMiddleware('elb.https', ElasticBeanstalkHttps::class);
-
-        //$kernel->prependMiddleware(HttpsProtocol::class);
-        //$kernel->prependMiddleware(ElasticBeanstalkHttps::class); 
-
-        //$this->app->middleware([ElasticBeanstalkHttps::class]);
-        //$this->app->middleware([HttpsProtocol::class]);
-
-//$this->app['router']->aliasMiddleware('elb-https', ElasticBeanstalkHttps::class);
-//$this->app['router']->aliasMiddleware('elb-redirect', HttpsProtocol::class);
+        //$router = $this->app['router'];
+        $router->pushMiddlewareToGroup('web', ElasticBeanstalkHttps::class);
+        $router->pushMiddlewareToGroup('web', HttpsProtocol::class);
 
     }
 
