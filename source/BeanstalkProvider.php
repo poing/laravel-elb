@@ -32,7 +32,7 @@ class BeanstalkProvider extends ServiceProvider {
         $router = $this->app['router'];
     
         //$router->aliasMiddleware('elb.redirect', HttpsProtocol::class);
-        $router->aliasMiddleware('elb.https', ElasticBeanstalkHttps::class);
+        $router->aliasMiddleware('elb.https', Poing\Beanstalk\Middleware\ElasticBeanstalkHttps::class);
 
         //$kernel->prependMiddleware(HttpsProtocol::class);
         //$kernel->prependMiddleware(ElasticBeanstalkHttps::class); 
