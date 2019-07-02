@@ -2,7 +2,7 @@
 
 This package provides middleware that *simplifies* using `HTTPS` with your Laravel app on AWS Elastic Beanstalk.
 
-It provides middleware that will ensure that your Laravel app will correctly recognise **secure** requests when running on Elastic Beanstalk with a Load Balancer **-and-** middleware that performs a `HTTPS` redirect for `HTTP` connections.  *Excluding the Elastic Beanstalk HealthChecker **and** user defined paths.*
+It provides middleware that will ensure that your Laravel app will correctly recognise **secure** requests when running on Elastic Beanstalk with a Load Balancer **-and-** middleware that performs `HTTP` to `HTTPS` redirection.
 
 Recognizing **secure** requests is *based* on the [gist](https://gist.github.com/peppeocchi/4f522663d7e88029daeba833c835df3d) that does the exact same thing.
 
