@@ -28,8 +28,8 @@ class BeanstalkProvider extends ServiceProvider {
     //public function boot() {
     public function boot(Kernel $kernel) {
 
-        $kernel->pushMiddleware(HttpsProtocol::class);
-        $kernel->pushMiddleware(ElasticBeanstalkHttps::class); 
+        $kernel->prependMiddleware(HttpsProtocol::class);
+        $kernel->prependMiddleware(ElasticBeanstalkHttps::class); 
 
         //$this->app->middleware([ElasticBeanstalkHttps::class]);
         //$this->app->middleware([HttpsProtocol::class]);
