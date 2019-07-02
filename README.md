@@ -6,7 +6,7 @@ It provides middleware that will ensure that your Laravel app will correctly rec
 
 Recognizing **secure** requests is *based* on the [gist](https://gist.github.com/peppeocchi/4f522663d7e88029daeba833c835df3d) that does the exact same thing.
 
-This package *eliminates* the necessity of using `.ebextensions` to handle `HTTP` to `HTTPS` redirection with the Apache `RewriteEngine` method.  While allowing *some* traffic **not** to be redirected, such as the Elastic Beanstalk HealthChecker.
+This package *eliminates* the necessity of using `.ebextensions` to handle `HTTP` to `HTTPS` redirection with the Apache `RewriteEngine` method.  While allowing *some* traffic **not** to be redirected, *such as the Elastic Beanstalk HealthChecker*.
 
 ## Installation
 You can install this middleware through [Composer](https://getcomposer.org/)
