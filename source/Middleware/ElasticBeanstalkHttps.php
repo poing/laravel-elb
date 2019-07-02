@@ -1,6 +1,6 @@
 <?php
 
-namespace Poing\Middleware;
+namespace Poing\Beanstalk\Middleware;
 
 use Closure;
 use Symfony\Component\HttpFoundation\Request;

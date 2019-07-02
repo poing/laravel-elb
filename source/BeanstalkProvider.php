@@ -8,8 +8,8 @@ use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
-use Poing\Middleware\ElasticBeanstalkHttps;
-use Poing\Middleware\HttpsProtocol;
+use Poing\Beanstalk\Middleware\ElasticBeanstalkHttps;
+use Poing\Beanstalk\Middleware\HttpsProtocol;
 
 class BeanstalkProvider extends ServiceProvider {
 
