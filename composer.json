@@ -9,7 +9,6 @@
         }
     ],
     "require": {
-        "laravel/framework": ">=5.4",
         "ocramius/package-versions": "^1.4",
         "czproject/git-php": "^3.17"
     },
