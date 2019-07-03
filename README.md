@@ -28,3 +28,9 @@ composer require poing/laravel-elb
 APP_ENV=local  // HTTPS Redirection Disabled
 ```
 
+## Configuration
+
+## .ebextensions
+
+**YOU MUST USE GIT FOR `eb deply` TO WORK PROPERLY!**
+
