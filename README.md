@@ -8,11 +8,11 @@ It provides the following:
 * Middleware for HTTP to HTTPS redirection
   * *Includes the ability to configure exceptions to the HTTPS redirection*
 * Environment Configuration Files `.ebextensions` for Deployment 
-  * Set document root `/public`
-  * *Example* for reading the environment configuration
+  * Set the document root to `/public`
+  * *Example* showing how to read environment configuration
   * Copy `.env.aws` to `.env`
-  * *Sample* `artisan` commands
-  * *How to* install and run `npm`
+  * Running `artisan` commands
+  * *How to* install and run `npm` commands
 
 ---
 
