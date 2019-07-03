@@ -42,10 +42,12 @@ class BeanstalkInstall extends Command
         $this->comment('Publishing Beanstalk Configuration...');
         //$this->callSilent('vendor:publish', ['--tag' => 'laravel-elb-config']);
         $file = new Filesystem();
+        $this->info('Creating .ebextensions directory.');
         $file->copyDirectory(
             __DIR__ . '/../.ebextensions',
             base_path('.ebextensions')
         );
+        $this->info('Adding .env.aws environment file.');
         $file->copy(
             __DIR__ . '/../.env.aws',
             base_path('.env.aws')

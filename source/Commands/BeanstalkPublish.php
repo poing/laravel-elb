@@ -19,7 +19,7 @@ class BeanstalkPublish extends Command
      *
      * @var string
      */
-    protected $description = 'Install Configuration Files for Laravel-ELB';
+    protected $description = 'Install Configuration Files to customize Laravel-ELB';
 
     /**
      * Create a new command instance.
@@ -40,7 +40,7 @@ class BeanstalkPublish extends Command
     {
         $this->comment('Publishing Beanstalk Configuration...');
         $this->callSilent('vendor:publish', ['--tag' => 'laravel-elb-config']);
-        $this->info('AWS Elastic Beanstalk installed successfully.');
+        $this->info('<fg=red>config/laravel-elb.php</> <fg=default>successfully installed.</>');
 
     }
 }

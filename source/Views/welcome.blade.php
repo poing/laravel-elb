@@ -117,10 +117,8 @@
 
 
                 <div class="links m-b-md">
-                    Try it: <a href={{ $url }}>{{ $url }}</a>
+                    <a href={{ $url }}>Try: {{ $base_url['scheme'] }}</a>
                 </div>
-
-
 
                 <div class="links m-b-md">
                     <a href="https://laravel.com/docs">Docs</a>
