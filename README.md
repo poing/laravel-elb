@@ -19,7 +19,7 @@ composer require poing/laravel-elb
 
 ### Starting from Scratch
 
-```
+```sh
 composer create-project --prefer-dist laravel/laravel my-project
 cd my-project
 composer require poing/laravel-elb
