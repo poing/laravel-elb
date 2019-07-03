@@ -12,7 +12,7 @@ It provides the following:
   * *Example* for reading the environment configuration
   * Copy `.env.aws` to `.env`
   * *Sample* `artisan` commands
-  * Install and running `npm`
+  * *How to* install and run `npm`
 
 ---
 
