@@ -39,9 +39,10 @@ Middleware included in this package *eliminates* the necessity of using `.ebexte
 
 *By default*, this package includes a *sample* `view` and allows `HTTP` access to `URI`'s with a base of `/unsecure`.
 
+```sh
 http://{domain.tld}/unsecure
-
-
+http://{domain.tld}/unsecure/your/web/route
+```
 
 
 
