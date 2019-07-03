@@ -29,6 +29,9 @@ class BeanstalkProvider extends ServiceProvider {
      * @return void
      */
     public function boot(Router $router) {
+
+        // defaultStringLength for MariaDB or Auroa
+        Schema::defaultStringLength(191);
     
         // Add to middleware stack.
         $router->pushMiddlewareToGroup('web', ElasticBeanstalkHttps::class);
