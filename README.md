@@ -12,7 +12,7 @@ It provides the following:
 
 ## Installation
 
-You can install this package using [Composer](https://getcomposer.org/)
+You can install this package using [composer](https://getcomposer.org/)
 ```
 composer require poing/laravel-elb
 ```
@@ -21,9 +21,10 @@ composer require poing/laravel-elb
 
 ```
 composer create-project --prefer-dist laravel/laravel my-project
-cd project
+cd my-project
 composer require poing/laravel-elb
 php artisan elb:install
+php artisan elb:publis # optional
 
 git init
 git add .
