@@ -9,9 +9,9 @@ use Illuminate\Http\Resources\Json\Resource;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
-use Poing\Beanstalk\Middleware\ElasticBeanstalkHttps;
 use Poing\Beanstalk\Commands\BeanstalkInstall;
-
+use Poing\Beanstalk\Commands\BeanstalkPublish;
+use Poing\Beanstalk\Middleware\ElasticBeanstalkHttps;
 use Poing\Beanstalk\Middleware\HttpsProtocol;
 
 class BeanstalkProvider extends ServiceProvider {
@@ -38,8 +38,16 @@ class BeanstalkProvider extends ServiceProvider {
         if ($this->app->runningInConsole()) {
             $this->commands([
                 BeanstalkInstall::class,
+                BeanstalkPublish::class,
             ]);
         }
+
+        // Publish Configuration Files
+        $this->publishes(
+            [ __DIR__ . '/config/laravel-elb.php' => config_path('laravel-elb.php'),
+            ], 
+            'laravel-elb-config'
+        );
 
     }
 
@@ -51,8 +59,14 @@ class BeanstalkProvider extends ServiceProvider {
     public function register() {
 
         // Default Package Configuration
-        //$this->mergeConfigFrom(__DIR__.'/config/default.php', 'elb');
-        //$this->mergeConfigFrom(__DIR__.'/config/elb.php', 'elb');
+        $this->mergeConfigFrom(
+            __DIR__ . '/config/default.php', 
+            'laravel-elb'
+        );
+        $this->mergeConfigFrom(
+            __DIR__ . '/config/laravel-elb.php', 
+            'laravel-elb'
+        );
 
     }
 

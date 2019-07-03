@@ -4,8 +4,9 @@ namespace Poing\Beanstalk\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Filesystem\Filesystem;
 
-class EarMarkInstall extends Command
+class BeanstalkInstall extends Command
 {
     /**
      * The name and signature of the console command.
@@ -38,9 +39,18 @@ class EarMarkInstall extends Command
      */
     public function handle()
     {
-        $this->comment('Publishing EarMark Configuration...');
-        $this->callSilent('vendor:publish', ['--tag' => 'earmark-config']);
-        $this->info('EarMark installed successfully.');
+        $this->comment('Publishing Beanstalk Configuration...');
+        //$this->callSilent('vendor:publish', ['--tag' => 'laravel-elb-config']);
+        $file = new Filesystem();
+        $file->copyDirectory(
+            __DIR__ . '/../.ebextensions',
+            base_path('.ebextensions')
+        );
+        $file->copy(
+            __DIR__ . '/../.env.aws',
+            base_path('.env.aws')
+        );
+        $this->info('AWS Elastic Beanstalk installed successfully.');
 
     }
 }
