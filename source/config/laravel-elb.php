@@ -1,6 +1,5 @@
 <?php
 
-
 return [
 
     /*
@@ -9,12 +8,12 @@ return [
     |--------------------------------------------------------------------------
     | An array of URI paths that are NOT redirected to HTTPS.
     |
-    | Removing 'unsecure' from the array will disable the view included in
+    | Removing 'unsecure' from the array will disable the view included with
     | the laravel-elb package.
     |
     */
     
-    'exclude' => [ ],
+    'exclude' => [ 'unsecure', ],
 
     /*
     |--------------------------------------------------------------------------

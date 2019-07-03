@@ -8,7 +8,7 @@ return [
     |--------------------------------------------------------------------------
     | An array of URI paths that are NOT redirected to HTTPS.
     |
-    | Remooving 'unsecure' from the array will disable the view included in
+    | Removing 'unsecure' from the array will disable the view included with
     | the laravel-elb package.
     |
     */
