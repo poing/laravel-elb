@@ -4,9 +4,9 @@ The package proveds the necessary *essentials* to run your Laravel app on AWS El
 
 It provides the following:
 
-* Recognize **secure** requests.
-* HTTP to HTTPS Redirection
-* Environment Configuration Files `.ebextensions`
+* Middleware to recognize **secure** requests
+* Middleware for HTTP to HTTPS redirection
+* Environment Configuration Files `.ebextensions` for Deplyment
 
 ---
 
