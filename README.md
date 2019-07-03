@@ -31,7 +31,7 @@ Once the package is installed, the following `artisan` commands will be availabl
 
 Middleware included in this package *eliminates* the necessity of using `.ebextensions` to handle `HTTP` to `HTTPS` redirection with the Apache `RewriteEngine` method.  While allowing *some* traffic **not** to be redirected, *such as the Elastic Beanstalk HealthChecker*.
 
-> The middleware is a result of *frustration* from trying to get the correct `RewriteCond` rules to **exclude** multiple conditions using the `.ebextensions` method.  Handling the `HTTP` to `HTTPS` redirection with Laravel provides more *flexibility* with less headaches.  *Sadly, some applications can't fetch content from third party domains that's only available over HTTPS.*
+> The middleware is a result of *frustration* from trying to get the correct `RewriteCond` rules to **exclude** multiple conditions using the `.ebextensions` method.  Handling the `HTTP` to `HTTPS` redirection with Laravel provides more *flexibility* with less headaches.  *I was working with an application that could not fetch content from third party domains that use HTTPS.*
 
 `http://<laravel application>/unsecure`
 
