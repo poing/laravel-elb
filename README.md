@@ -33,12 +33,14 @@ Middleware included in this package *eliminates* the necessity of using `.ebexte
 
 > The middleware is a result of *frustration* from trying to get the correct `RewriteCond` rules to **exclude** multiple conditions using the `.ebextensions` method.  Handling the `HTTP` to `HTTPS` redirection with Laravel provides more *flexibility* with less headaches.  *I was working with an application that could **not** fetch content from third party domains that use HTTPS.*
 
+*This package does **not** prevent or redirect `HTTPS` to `HTTP`.  It just allows `HTTP` access to specific `URI`'s.*
+
 ### Basic Usage
 
-*By default*, this package includes a `view` and allows `HTTP` access to `URI`'s with a base of `/unsecure`.  *This package does **not** prevent or redirect `HTTPS` access.  It just allows `HTTP` access to specific `URI`'s.*
+*By default*, this package includes a *sample* `view` and allows `HTTP` access to `URI`'s with a base of `/unsecure`.
 
 http://{domain.tld}/unsecure
-```
+
 
 
 
