@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/unsecure', function () {
-    return view('unsecure::welcome');
-});
+if (in_array('unsecure', config('laravel-elb.exclude')))
+    Route::get('/unsecure', function () {
+        return view('unsecure::welcome');
+    });

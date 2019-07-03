@@ -75,10 +75,12 @@ class BeanstalkProvider extends ServiceProvider {
             __DIR__ . '/config/default.php', 
             'laravel-elb'
         );
+        /*
         $this->mergeConfigFrom(
             __DIR__ . '/config/laravel-elb.php', 
             'laravel-elb'
         );
+        */
 
     }
 
