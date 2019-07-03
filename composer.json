@@ -1,6 +1,6 @@
 {
     "name": "poing/laravel-elb",
-    "description": "Laravel Middleware for AWS Elastic Beanstalk HTTPS Support",
+    "description": "Quickly get Laravel Up and Running on AWS Elastic Beanstalk with HTTPS",
     "license": "MIT",
     "authors": [
         {

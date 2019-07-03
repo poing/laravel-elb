@@ -1,4 +1,14 @@
-# Laravel Middleware for AWS Elastic Beanstalk HTTPS Support
+# Quickly get Laravel Up and Running on AWS Elastic Beanstalk with HTTPS
+
+The package proveds the necessary *essentials* to run your Laravel app on AWS Elastic Beanstalk with HTTPS.
+
+It provides the following:
+
+* Recognize **secure** requests.
+* HTTP to HTTPS Redirection
+* Environment Configuration Files `.ebextensions`
+
+---
 
 This package provides middleware that *simplifies* using `HTTPS` with your Laravel app on AWS Elastic Beanstalk.
 
