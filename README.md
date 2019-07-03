@@ -24,7 +24,7 @@ composer create-project --prefer-dist laravel/laravel my-project
 cd my-project
 composer require poing/laravel-elb
 php artisan elb:install
-php artisan elb:publis; # optional
+php artisan elb:publish; # optional
 
 git init
 git add .
