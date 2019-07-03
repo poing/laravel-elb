@@ -20,7 +20,8 @@ class HttpsProtocol {
                 !$request->secure() &&
                 !(App::environment() === 'local') &&
                 !(
-                    ($request->is('unsecure') || $request->is('unsecure/*')) ||
+//                  ($request->is('unsecure') || $request->is('unsecure/*')) ||
+                    ($this->unsecureConfig($request)) ||
                     ($request->header('User-Agent') === 'ELB-HealthChecker/2.0')
                 )
             ) {
@@ -42,5 +43,16 @@ class HttpsProtocol {
         $check = 'ELB-HealthChecker';
 
         return (strpos($agent, $check) == 0) ? 'true' : 'false';
+    }
+    
+    private function unsecureConfig($request)
+    {
+    
+        foreach (config('laravel-elb.unsecure') as $value)
+            if ($request->is($value) || $request->is($value . '/*'))
+                return true;
+        
+        return false;
+    
     }
 }

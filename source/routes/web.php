@@ -14,3 +14,11 @@
 Route::get('/unsecure', function () {
     return view('unsecure::welcome');
 });
+
+Route::get('/unsecure/alpha', function () {
+    return view('unsecure::welcome');
+});
+
+Route::get('/bravo', function () {
+    return view('unsecure::welcome');
+});
