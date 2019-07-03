@@ -21,7 +21,7 @@ You can install this package using [composer](https://getcomposer.org/)
 composer require poing/laravel-elb
 ```
 
-### `artisan` Commands
+#### `artisan` Commands
 Once the package is installed, the following `artisan` commands will be available in your Laravel application:
 
 * **`elb:install`**: Add `.ebextensions` directory and `.env.aws` example.
