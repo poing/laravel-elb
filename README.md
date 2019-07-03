@@ -1,6 +1,6 @@
 # Running Laravel on AWS Elastic Beanstalk with HTTPS
 
-The package proveds the necessary *essentials* to get your Laravel app running on AWS Elastic Beanstalk `(ELB)` with HTTPS.
+The package provides the necessary *essentials* to get your Laravel app running on AWS Elastic Beanstalk `(ELB)` with HTTPS.
 
 It provides the following:
 
@@ -13,7 +13,7 @@ It provides the following:
 ## Installation
 
 You can install this package using [composer](https://getcomposer.org/)
-```
+```sh
 composer require poing/laravel-elb
 ```
 
