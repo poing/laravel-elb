@@ -13,6 +13,7 @@ use Poing\Beanstalk\Commands\BeanstalkInstall;
 use Poing\Beanstalk\Commands\BeanstalkPublish;
 use Poing\Beanstalk\Middleware\ElasticBeanstalkHttps;
 use Poing\Beanstalk\Middleware\HttpsProtocol;
+use Poing\Beanstalk\Providers\BeanstalkRouteServiceProvider as BeanstalkRoutes;
 
 class BeanstalkProvider extends ServiceProvider {
 
@@ -52,6 +53,13 @@ class BeanstalkProvider extends ServiceProvider {
             'laravel-elb-config'
         );
 
+		// Add all routes
+		$this->app->register(BeanstalkRoutes::class);
+        
+        // Load the views
+        $this->loadViews();
+
+
     }
 
     /**
@@ -84,5 +92,16 @@ class BeanstalkProvider extends ServiceProvider {
         $this->app->make(EloquentFactory::class)->load($path);
     }
 
+
+    /**
+     * Load views
+     *
+     * @return void
+     */
+    private function loadViews() {
+
+        $this->loadViewsFrom(__DIR__.'/Views', 'lavavel-elb');
+
+    }
 
 }
