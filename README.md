@@ -46,13 +46,9 @@ http://{domain.tld}/unsecure
 http://{domain.tld}/unsecure/your/web/route
 ```
 
-### Sample View
-
-The *sample* `view` will be **disabled** once `php artisan elb:publish` has been run.
-
 #### Configuration
 
-The customize the
+To use your own configuration, run `php artisan elb:publish` to install `config/laravel-elb.php` in your Laravel application.  
 
 
 ---
