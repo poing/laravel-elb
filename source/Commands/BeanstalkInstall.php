@@ -20,7 +20,7 @@ class BeanstalkInstall extends Command
      *
      * @var string
      */
-    protected $description = 'Install Configuration Files (.ebextensions)';
+    protected $description = 'Install Elastic Beanstalk Files (.ebextensions)';
 
     /**
      * Create a new command instance.
@@ -42,17 +42,18 @@ class BeanstalkInstall extends Command
         $this->comment('Publishing Beanstalk Configuration...');
         //$this->callSilent('vendor:publish', ['--tag' => 'laravel-elb-config']);
         $file = new Filesystem();
-        $this->info('Creating .ebextensions directory.');
+        $this->info('Creating <fg=blue>.ebextensions</> directory.');
         $file->copyDirectory(
             __DIR__ . '/../.ebextensions',
             base_path('.ebextensions')
         );
-        $this->info('Adding .env.aws environment file.');
+        $this->info('Adding <fg=blue>.env.aws</> environment file.');
         $file->copy(
             __DIR__ . '/../.env.aws',
             base_path('.env.aws')
         );
         $this->info('AWS Elastic Beanstalk installed successfully.');
+        $this->info('<fg=red>Reminder: The EB-CLI works best when the Laravel application uses <fg=blue>version control</>.');
 
     }
 }

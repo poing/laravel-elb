@@ -40,7 +40,7 @@ class BeanstalkPublish extends Command
     {
         $this->comment('Publishing Beanstalk Configuration...');
         $this->callSilent('vendor:publish', ['--tag' => 'laravel-elb-config']);
-        $this->info('<fg=red>config/laravel-elb.php</> <fg=default>successfully installed.</>');
+        $this->info('<fg=blue>config/laravel-elb.php</> <fg=green>successfully installed.</>');
 
     }
 }
