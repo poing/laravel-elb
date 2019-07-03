@@ -25,6 +25,7 @@ composer require poing/laravel-elb
 Once the package has been installed, the following `artisan` commands will be available to your Laravel application.
 
 **`elb:install`**: Add `.ebextensions` directory and `.env.aws` example.
+
 **`elb:publish`**: Publishes `config/laravel-elb` into the Laravel application, to allow customization of HTTPS redirection.
 
 ### Starting from Scratch
