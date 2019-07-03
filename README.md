@@ -27,6 +27,19 @@ Once the package is installed, the following `artisan` commands will be availabl
 * **`elb:install`**: Add `.ebextensions` directory and `.env.aws` example.
 * **`elb:publish`**: Puts `config/laravel-elb` into the Laravel application, to allow HTTPS redirection customization.
 
+## HTTP to HTTPS Redirection
+
+This package *eliminates* the necessity of using `.ebextensions` to handle `HTTP` to `HTTPS` redirection with the Apache `RewriteEngine` method.  While allowing *some* traffic **not** to be redirected, *such as the Elastic Beanstalk HealthChecker*.
+
+> This package is the result of *frustration* from trying to get the correct `RewriteCond` rules to **exclude** multiple conditions using the `.ebextensions` method.  Handling the `HTTP` to `HTTPS` redirection with Laravel provides more *flexibility* with less headaches.
+
+
+
+---
+---
+
+
+
 ### Starting from Scratch
 
 ```sh
@@ -58,9 +71,7 @@ It provides middleware that will ensure that your Laravel app will correctly rec
 
 Recognizing **secure** requests is *based* on the [gist](https://gist.github.com/peppeocchi/4f522663d7e88029daeba833c835df3d) that does the exact same thing.
 
-This package *eliminates* the necessity of using `.ebextensions` to handle `HTTP` to `HTTPS` redirection with the Apache `RewriteEngine` method.  While allowing *some* traffic **not** to be redirected, *such as the Elastic Beanstalk HealthChecker*.
 
-> This package is the result of *frustration* from trying to get the correct `RewriteCond` rules to **exclude** multiple conditions using the `.ebextensions` method.  Handling the `HTTP` to `HTTPS` redirection with Laravel provides more *flexibility* with less headaches.
 
 ## Installation
 You can install this package using [Composer](https://getcomposer.org/)
