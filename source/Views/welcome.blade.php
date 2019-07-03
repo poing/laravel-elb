@@ -108,9 +108,17 @@
             $git_version = $e->getMessage();
         }
     }
+    
+    $base_url = parse_url(url()->current());
+    $base_url['scheme'] = ($base_url['scheme'] == 'http') ? 'https' : 'http';
+    $url = $base_url['scheme'] . '://' . $base_url['host'] . $base_url['path'];
 
 ?>
 
+
+                <div class="links m-b-md">
+                    <a href={{ $url }}>{{ $url }}</a>
+                </div>
 
 
 
