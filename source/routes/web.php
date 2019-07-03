@@ -12,5 +12,5 @@
 */
 
 Route::get('/unsecure', function () {
-    return view('laravel-elb.welcome');
+    return view('unsecure::welcome');
 });

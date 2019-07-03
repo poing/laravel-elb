@@ -47,7 +47,7 @@ class BeanstalkInstall extends Command
             base_path('.ebextensions')
         );
         $file->copy(
-            __DIR__ . '/../env.aws',
+            __DIR__ . '/../.env.aws',
             base_path('.env.aws')
         );
         $this->info('AWS Elastic Beanstalk installed successfully.');

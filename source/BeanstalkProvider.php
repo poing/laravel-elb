@@ -57,7 +57,8 @@ class BeanstalkProvider extends ServiceProvider {
 		$this->app->register(BeanstalkRoutes::class);
         
         // Load the views
-        $this->loadViews();
+        //$this->loadViews();
+        $this->loadViewsFrom(__DIR__.'/Views', 'unsecure');
 
 
     }
@@ -100,7 +101,7 @@ class BeanstalkProvider extends ServiceProvider {
      */
     private function loadViews() {
 
-        $this->loadViewsFrom(__DIR__.'/Views', 'lavavel-elb');
+        $this->loadViewsFrom( __DIR__ . '/Views', 'elb');
 
     }
 
