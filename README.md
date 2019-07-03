@@ -14,14 +14,17 @@ It provides the following:
   * Run `artisan` commands
   * *How to* install and run `npm` commands
 
----
-
 ## Installation
 
 You can install this package using [composer](https://getcomposer.org/)
 ```sh
 composer require poing/laravel-elb
 ```
+
+Once the package has been installed, the following `artisan` commands will be available to your Laravel application.
+
+* `elb:install`
+* `elb:publish`
 
 ### Starting from Scratch
 
