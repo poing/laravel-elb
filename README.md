@@ -48,9 +48,13 @@ http://{domain.tld}/unsecure/your/web/route
 
 #### Configuration
 
-To use your own configuration, run `php artisan elb:publish` to install `config/laravel-elb.php` in your Laravel application.  
+To use your own configuration, run `elb:publish` to install `config/laravel-elb.php` in your Laravel application.  
 
-> This will **disable** the *sample* `view` included in the package.
+```
+php artisan elb:publish
+```
+
+> This will **disable** the *sample* `view` included with the package.
 
 
 
