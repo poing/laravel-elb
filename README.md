@@ -9,9 +9,9 @@ It provides the following:
   * *Includes the ability to configure exceptions to the HTTPS redirection*
 * Environment Configuration Files `.ebextensions` for Deployment 
   * Set the document root to `/public`
-  * *Example* showing how to read environment configuration
+  * *Example* showing how to read environment configuration variables
   * Copy `.env.aws` to `.env`
-  * Running `artisan` commands
+  * Run `artisan` commands
   * *How to* install and run `npm` commands
 
 ---
