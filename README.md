@@ -6,7 +6,7 @@ It provides the following:
 
 * Middleware to recognize **secure** requests
 * Middleware for HTTP to HTTPS redirection
-  * *Includes the ability to customizable exceptions from HTTPS redirection*
+  * *Includes the ability to configure exceptions for HTTPS redirection*
 * Environment Configuration Files `.ebextensions` for Deployment 
 
 ---
