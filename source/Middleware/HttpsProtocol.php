@@ -52,10 +52,10 @@ class HttpsProtocol {
         {
             if ($request->is($value))
                 return true;
-                
-            if !(config('laravel-elb.root_only'))
+
+            if (!config('laravel-elb.root_only'))
                 if ($request->is($value . '/*'))
-                    return true;        
+                    return true;
         
         }
         
