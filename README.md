@@ -58,10 +58,22 @@ php artisan elb:publish
 
 ##### Excluded URI Paths
 
-* **`exclude`** is an array of `URI` paths that allow `HTTP` access.
+* **`exclude`** is an array of `URI` paths that will allow `HTTP` access.
 
 ```
-    'exclude' => [ 'alpha', 'bravo' ],
+    'exclude' => [ 'alpha', 'bravo', 'charlie/delta' ],
+```
+
+```sh
+http://{domain.tld}/alpha
+http://{domain.tld}/alpha/any
+http://{domain.tld}/alpha/any/path
+http://{domain.tld}/bravo
+http://{domain.tld}/bravo/any
+http://{domain.tld}/bravo/any/path
+http://{domain.tld}/charlie
+http://{domain.tld}/charlie/delta
+http://{domain.tld}/charlie/delta/any/path
 ```
 
 ##### Strict Mode
