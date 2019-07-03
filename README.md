@@ -56,9 +56,16 @@ php artisan elb:publish
 
 > This will **disable** the *sample* `view` included with the package.
 
+##### Excluded URI Paths
+
+* **`exclude`** is an array of `URI` paths that allow `HTTP` access.
+
+```
+    'exclude' => [ 'alpha', 'bravo' ],
+```
+
 ##### Strict Mode
 
-##### Excluded URI Path
 
 
 ---
