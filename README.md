@@ -56,6 +56,9 @@ php artisan elb:publish
 
 > This will **disable** the *sample* `view` included with the package.
 
+##### Strict Mode
+
+##### Excluded URI Path
 
 
 ---
