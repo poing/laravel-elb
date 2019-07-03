@@ -1,6 +1,6 @@
 # Running Laravel on AWS Elastic Beanstalk with HTTPS
 
-The package provides the necessary *essentials* to get your Laravel app running on AWS Elastic Beanstalk `(ELB)` with HTTPS.
+The package provides the *essential* elements for a Laravel app running on AWS Elastic Beanstalk `(ELB)` with HTTPS.
 
 It provides the following:
 
