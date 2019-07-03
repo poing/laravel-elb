@@ -35,9 +35,8 @@ Middleware included in this package *eliminates* the necessity of using `.ebexte
 
 ### Basic Usage
 
-*By default*, this package includes a `view` that will allow `HTTP` access to address below:
+*By default*, this package includes a `view` and allows `HTTP` access to `URI`'s with a base of `/unsecure`.  *This package does **not** prevent or redirect `HTTPS` access.  It just allows `HTTP` access to specific `URI`'s.*
 
-```
 http://{domain.tld}/unsecure
 ```
 
