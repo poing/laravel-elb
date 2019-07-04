@@ -12,8 +12,8 @@
         "laravel/framework": ">=5.5"
     },
     "suggest": {
-        "ocramius/package-versions": "Provides access to version information about composer dependencies for the sample view.",
-        "czproject/git-php": "Provides access to branch information of the repo used for the sample view."
+        "ocramius/package-versions": "Package version for the sample view.",
+        "czproject/git-php": "Branch information the sample view."
     },
     "autoload": {
         "psr-4": {
