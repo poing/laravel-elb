@@ -34,9 +34,9 @@ Middleware included in this package *eliminates* the necessity of using `.ebexte
 
 > The middleware is a result of *frustration* from trying to get the correct `RewriteCond` rules to **exclude** multiple conditions using the `.ebextensions` method.  Handling the `HTTP` to `HTTPS` redirection with Laravel provides more *flexibility* with less headaches.  *I was working with an application that could **not** fetch content from third party domains that only used HTTPS.*
 
-* *This package **does not** prevent `HTTPS` to a `URI`.*
+* *This package **does not** prevent `HTTPS` access.*
 * *It **does not** redirect `HTTPS` to `HTTP`.*
-* *It **only** allows `HTTP` access to specific `URI`'s.*
+* *It **only** allows `HTTP` access to the specified `URI` paths.*
 
 ### Basic Usage
 
