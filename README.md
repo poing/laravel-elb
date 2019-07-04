@@ -61,19 +61,18 @@ php artisan elb:publish
 * **`exclude`** is an array of `URI` paths that will allow `HTTP` access.
 
 ```
-    'exclude' => [ 'alpha', 'bravo', 'charlie/delta' ],
+    'exclude' => [ 'alpha', 'bravo/charlie', ],
 ```
 
 ```diff
 + http://{domain.tld}/alpha
 + http://{domain.tld}/alpha/any
 + http://{domain.tld}/alpha/any/path
-+ http://{domain.tld}/bravo
-+ http://{domain.tld}/bravo/any
-+ http://{domain.tld}/bravo/any/path
-- https://{domain.tld}/charlie  # Redirected to HTTPS
-+ http://{domain.tld}/charlie/delta
-+ http://{domain.tld}/charlie/delta/any/path
+- https://{domain.tld}/bravo
++ http://{domain.tld}/bravo/charlie
++ http://{domain.tld}/bravo/charlie/any/path
+- https://{domain.tld}/bravo/any
+
 ```
 
 ##### Strict Mode
