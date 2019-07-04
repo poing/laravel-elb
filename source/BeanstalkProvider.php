@@ -11,8 +11,9 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Poing\Beanstalk\Commands\BeanstalkInstall;
 use Poing\Beanstalk\Commands\BeanstalkPublish;
-use Poing\Beanstalk\Middleware\ElasticBeanstalkHttps;
+//use Poing\Beanstalk\Middleware\ElasticBeanstalkHttps;
 use Poing\Beanstalk\Middleware\HttpsProtocol;
+use GO\ElasticBeanstalkHttps;
 use Poing\Beanstalk\Providers\BeanstalkRouteServiceProvider as BeanstalkRoutes;
 
 class BeanstalkProvider extends ServiceProvider {

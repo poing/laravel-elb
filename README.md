@@ -19,6 +19,7 @@ It provides the following:
 You can install this package using [composer](https://getcomposer.org/)
 ```sh
 composer require poing/laravel-elb
+composer require czproject/git-php ocramius/package-versions poing/laravel-elb
 ```
 
 #### `artisan` Commands
