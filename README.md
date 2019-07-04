@@ -32,6 +32,8 @@ Once the package is installed, the following `artisan` commands will be availabl
 
 Middleware included in this package *eliminates* the necessity of using `.ebextensions` to handle `HTTP` to `HTTPS` redirection with the Apache `RewriteEngine` method.  While allowing *some* traffic **not** to be redirected, *such as the Elastic Beanstalk HealthChecker*.
 
+It provides the *same* functionality as the [`https-redirect`](https://github.com/awsdocs/elastic-beanstalk-samples/blob/master/configuration-files/aws-provided/security-configuration/https-redirect/php/https-redirect-php.config) recommended in the AWS [documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-httpredirect.html), *and more.*
+
 > The middleware is a result of *frustration* from trying to get the correct `RewriteCond` rules to **exclude** multiple conditions using the `.ebextensions` method.  Handling the `HTTP` to `HTTPS` redirection with Laravel provides more *flexibility* with less headaches.  *I was working with an application that could **not** fetch content from third party domains that only used HTTPS.*
 
 * *This package **does not** prevent `HTTPS` access.*
