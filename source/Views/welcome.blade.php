@@ -109,7 +109,7 @@
                 $git_version = $e->getMessage();
             }
         } else {
-            $git_version = 'not found';
+            $git_version = 'Unable to Access';
         }
     }
 
@@ -123,7 +123,7 @@
             $package_version = $e->getMessage();
         }
     } else {
-        $package_version = 'not found';
+        $package_version = 'Unable to Access';
     }
     
     $base_url = parse_url(url()->current());
