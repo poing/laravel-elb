@@ -83,16 +83,17 @@ php artisan elb:publish
 * **`strict`**: Boolean setting to 
 
 ```
+    'exclude' => [ 'alpha', 'bravo/charlie', ],
     'strict' => true,
 ```
 
 ```diff
 // Green = HTTP Allowed, Red = Redirected to HTTPS
 + http://{domain.tld}/alpha
-+ http://{domain.tld}/alpha/any/path
+- https://{domain.tld}/alpha/any/path
 - https://{domain.tld}/bravo
 + http://{domain.tld}/bravo/charlie
-+ http://{domain.tld}/bravo/charlie/any/path
+- https://{domain.tld}/bravo/charlie/any/path
 - https://{domain.tld}/bravo/any
 ```
 
