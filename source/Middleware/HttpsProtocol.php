@@ -47,6 +47,9 @@ class HttpsProtocol {
     
     private function unsecureConfig($request)
     {
+
+        if (empty(config('laravel-elb.exclude'))
+            return false;
     
         foreach (config('laravel-elb.exclude') as $value)
         {
@@ -56,9 +59,7 @@ class HttpsProtocol {
             if (!config('laravel-elb.strict'))
                 if ($request->is($value . '/*'))
                     return true;
-        
         }
-        
         
         return false;
     

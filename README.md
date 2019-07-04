@@ -27,6 +27,16 @@ Once the package is installed, the following `artisan` commands will be availabl
 * **`elb:install`**: Add `.ebextensions` directory and `.env.aws` to the Laravel application.
 * **`elb:publish`**: Add `config/laravel-elb.php` to the Laravel application, to allow HTTPS redirection customization.
   * This will **disable** the *sample* `view` included with the package.
+  
+## Recognizing Secure Requests
+
+The AWS Elastic Beanstalk environment uses a load balancer to serve `HTTPS` requests, while the Laravel application *actually* runs in an AWS Elastic Beanstalk environment that **only** supports `HTTP`.
+
+This will cause the Laravel application to *represent* `HTTP` to helper methods that return `URL` information, since the Laravel application is **not aware** of the load balancer.
+
+Middleware included in this package will *simplify* using `HTTPS` with your Laravel application on AWS Elastic Beanstalk.  Ensuring that your Laravel application will correctly recognize **secure** requests when running on Elastic Beanstalk with a Load Balancer.  *Fixing helper methods that return `URL` information.*
+
+This middleware is *based* on a [gist](https://gist.github.com/peppeocchi/4f522663d7e88029daeba833c835df3d) by [Giuseppe Occhipinti](https://github.com/peppeocchi) that does the exact same thing.
 
 ## HTTP to HTTPS Redirection
 
@@ -134,11 +144,7 @@ eb deploy
 
 ---
 
-This package provides middleware that *simplifies* using `HTTPS` with your Laravel app on AWS Elastic Beanstalk.
 
-It provides middleware that will ensure that your Laravel app will correctly recognize **secure** requests when running on Elastic Beanstalk with a Load Balancer **-and-** middleware to perform `HTTP` to `HTTPS` redirection.
-
-Recognizing **secure** requests is *based* on the [gist](https://gist.github.com/peppeocchi/4f522663d7e88029daeba833c835df3d) that does the exact same thing.
 
 
 
