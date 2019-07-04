@@ -101,22 +101,30 @@
         $git_version = env('GIT_VERSION');
     } else {
         // AWS EB doesn't retain repository information
-        try {
-            $repo = new Cz\Git\GitRepository(base_path());
-            $git_version = $repo->getCurrentBranchName();
-        } catch (Exception $e) {
-            $git_version = $e->getMessage();
+        if (class_exists('Cz\Git\GitRepository')) {
+            try {
+                $repo = new Cz\Git\GitRepository(base_path());
+                $git_version = $repo->getCurrentBranchName();
+            } catch (Exception $e) {
+                $git_version = $e->getMessage();
+            }
+        } else {
+            $git_version = 'not found';
         }
     }
 
     // Package Version for poing/laravel-elb
-    try {
-        $package = PackageVersions\Versions::getVersion('poing/laravel-elb');
-        $package_version = strtok($package,'@');
-    } catch (Exception $e) {
-        $package_version = $e->getMessage();
+    if (class_exists('PackageVersions\Versions')) {
+        $elb = 'poing/laravel-elb';
+        try {
+            $package = PackageVersions\Versions::getVersion($elb);
+            $package_version = strtok($package,'@');
+        } catch (Exception $e) {
+            $package_version = $e->getMessage();
+        }
+    } else {
+        $package_version = 'not found';
     }
-
     
     $base_url = parse_url(url()->current());
     $base_url['scheme'] = ($base_url['scheme'] == 'http') ? 'https' : 'http';
