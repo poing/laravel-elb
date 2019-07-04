@@ -64,16 +64,16 @@ php artisan elb:publish
     'exclude' => [ 'alpha', 'bravo', 'charlie/delta' ],
 ```
 
-```sh
-http://{domain.tld}/alpha
-http://{domain.tld}/alpha/any
-http://{domain.tld}/alpha/any/path
-http://{domain.tld}/bravo
-http://{domain.tld}/bravo/any
-http://{domain.tld}/bravo/any/path
-http://{domain.tld}/charlie
-http://{domain.tld}/charlie/delta
-http://{domain.tld}/charlie/delta/any/path
+```diff
++ http://{domain.tld}/alpha
++ http://{domain.tld}/alpha/any
++ http://{domain.tld}/alpha/any/path
++ http://{domain.tld}/bravo
++ http://{domain.tld}/bravo/any
++ http://{domain.tld}/bravo/any/path
+- http://{domain.tld}/charlie
++ http://{domain.tld}/charlie/delta
++ http://{domain.tld}/charlie/delta/any/path
 ```
 
 ##### Strict Mode
