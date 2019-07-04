@@ -17,11 +17,11 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Limit to Root of URI Path
+    | Limit to Specific URI Path
     |--------------------------------------------------------------------------
     | Restrict to only URI paths specified by the exclude setting.  Otherwise
     | HTTPS would be excluded for paths with more depth.
-    |  /unsecure vs. /unsecure/alpha/bravo/charlie
+    |  /unsecure vs. /unsecure/any/path
     |
     */
     
