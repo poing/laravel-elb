@@ -26,6 +26,7 @@ Once the package is installed, the following `artisan` commands will be availabl
 
 * **`elb:install`**: Add `.ebextensions` directory and `.env.aws` example.
 * **`elb:publish`**: Puts `config/laravel-elb` into the Laravel application, to allow HTTPS redirection customization.
+  * This will **disable** the *sample* `view` included with the package.
 
 ## HTTP to HTTPS Redirection
 
