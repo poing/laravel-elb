@@ -108,6 +108,15 @@
             $git_version = $e->getMessage();
         }
     }
+
+    // Package Version for poing/laravel-elb
+    try {
+        $package = PackageVersions\Versions::getVersion('poing/laravel-elb');
+        $package_version = strtok($package,'@')
+    } catch (Exception $e) {
+        $package_version = $e->getMessage();
+    }
+
     
     $base_url = parse_url(url()->current());
     $base_url['scheme'] = ($base_url['scheme'] == 'http') ? 'https' : 'http';
@@ -142,7 +151,7 @@
                    {{ App::environment() }}
                 </dir>
                 <div class="version">
-                 poing/laravel-elb: {{ strtok(PackageVersions\Versions::getVersion('poing/laravel-elb'),'@') }}
+                 poing/laravel-elb: {{ $package_version }}
                   </div>
 
             </div>
