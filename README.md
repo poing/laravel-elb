@@ -71,7 +71,7 @@ php artisan elb:publish
 + http://{domain.tld}/bravo
 + http://{domain.tld}/bravo/any
 + http://{domain.tld}/bravo/any/path
-- https://{domain.tld}/charlie
+- https://{domain.tld}/charlie  # Redirected to HTTPS
 + http://{domain.tld}/charlie/delta
 + http://{domain.tld}/charlie/delta/any/path
 ```
