@@ -65,7 +65,7 @@ php artisan elb:publish
 * **`exclude`**: An array of `URI` paths that will allow `HTTP` access.
 
 ```
-    'exclude' => [ 'alpha', 'bravo/charlie', ],
+'exclude' => [ 'alpha', 'bravo/charlie', ],
 ```
 
 ```diff
@@ -83,8 +83,8 @@ php artisan elb:publish
 * **`strict`**: Boolean setting to 
 
 ```
-    'exclude' => [ 'alpha', 'bravo/charlie', ],
-    'strict' => true,
+'exclude' => [ 'alpha', 'bravo/charlie', ],
+'strict' => true,
 ```
 
 ```diff
