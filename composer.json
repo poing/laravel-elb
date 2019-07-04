@@ -9,8 +9,7 @@
         }
     ],
     "require": {
-        "laravel/framework": ">=5.5",
-        "peppeocchi/laravel-elb-middleware": ">=2.0"
+        "laravel/framework": ">=5.5"
     },
     "suggest": {
         "ocramius/package-versions": "Provides access to version information about composer dependencies for the sample view.",
