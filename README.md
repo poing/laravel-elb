@@ -35,6 +35,7 @@ The AWS Elastic Beanstalk environment uses a load balancer to serve `HTTPS` requ
 This can cause the Laravel application to *represent* `HTTP` to helper methods that return `URL` information, since the Laravel application is **not aware** of the load balancer.
 
 ```php
+// Site: https://domain.tld
 url()->current(); // Returns: 'http://domain.tld'
 ```
 
