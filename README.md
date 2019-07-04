@@ -63,7 +63,7 @@ php artisan elb:publish
 ##### Excluded URI Paths
 
 * **`exclude`**: An array of `URI` paths that are **not** redirected to `HTTPS`.
-  * *Empty array will redirect all `HTTP` to `HTTPS`.
+  * *Empty array will redirect all `HTTP` to `HTTPS`.*
 
 ```
     'exclude' => [ 'alpha', 'bravo/charlie', ],
