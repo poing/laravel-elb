@@ -71,7 +71,7 @@ php artisan elb:publish
 + http://{domain.tld}/bravo
 + http://{domain.tld}/bravo/any
 + http://{domain.tld}/bravo/any/path
-- http://{domain.tld}/charlie
+- https://{domain.tld}/charlie
 + http://{domain.tld}/charlie/delta
 + http://{domain.tld}/charlie/delta/any/path
 ```
