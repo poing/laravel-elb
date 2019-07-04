@@ -112,7 +112,7 @@
     // Package Version for poing/laravel-elb
     try {
         $package = PackageVersions\Versions::getVersion('poing/laravel-elb');
-        $package_version = strtok($package,'@')
+        $package_version = strtok($package,'@');
     } catch (Exception $e) {
         $package_version = $e->getMessage();
     }
