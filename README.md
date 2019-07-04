@@ -34,9 +34,9 @@ The AWS Elastic Beanstalk environment uses a load balancer to serve `HTTPS` requ
 
 This can cause the Laravel application to *represent* `HTTP` to helper methods that return `URL` information, since the Laravel application is **not aware** of the load balancer.
 
-```php
-// Site: https://domain.tld
-url()->current(); // Returns: 'http://domain.tld'
+```diff
+// https://domain.tld
+- url()->current(); // Returns: 'http://domain.tld'
 ```
 
 Middleware included in this package will *simplify* using `HTTPS` with your Laravel application on AWS Elastic Beanstalk.  Ensuring that your Laravel application will correctly recognize **secure** requests when running on Elastic Beanstalk with a Load Balancer.  *Allowing helper methods that return `URL` information, to represent the correct protocol `scheme`.*
