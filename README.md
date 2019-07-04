@@ -43,7 +43,7 @@ Middleware included in this package *eliminates* the necessity of using `.ebexte
 *By default*, this package includes a *sample* `view` and allows `HTTP` access to `URI`'s with a base of `/unsecure`.
 
 ```diff
-Green = HTTP Allowed, Red = Redirected to HTTPS
+// Green = HTTP Allowed, Red = Redirected to HTTPS
 + http://{domain.tld}/unsecure
 + http://{domain.tld}/unsecure/your/web/route
 - https://{domain.tld}/
@@ -62,23 +62,41 @@ php artisan elb:publish
 
 ##### Excluded URI Paths
 
-* **`exclude`** is an array of `URI` paths that will allow `HTTP` access.
+* **`exclude`**: An array of `URI` paths that will allow `HTTP` access.
 
 ```
     'exclude' => [ 'alpha', 'bravo/charlie', ],
 ```
 
 ```diff
+// Green = HTTP Allowed, Red = Redirected to HTTPS
 + http://{domain.tld}/alpha
 + http://{domain.tld}/alpha/any/path
 - https://{domain.tld}/bravo
 + http://{domain.tld}/bravo/charlie
 + http://{domain.tld}/bravo/charlie/any/path
 - https://{domain.tld}/bravo/any
-
 ```
 
 ##### Strict Mode
+
+* **`strict`**: Boolean setting to 
+
+```
+    'strict' => true,
+```
+
+```diff
+// Green = HTTP Allowed, Red = Redirected to HTTPS
++ http://{domain.tld}/alpha
++ http://{domain.tld}/alpha/any/path
+- https://{domain.tld}/bravo
++ http://{domain.tld}/bravo/charlie
++ http://{domain.tld}/bravo/charlie/any/path
+- https://{domain.tld}/bravo/any
+```
+
+
 
 
 
