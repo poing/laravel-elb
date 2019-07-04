@@ -67,7 +67,7 @@ php artisan elb:publish
 ```
     'exclude' => [ 'alpha', 'bravo/charlie', ],
 ```
-
+###### Behaviour
 ```diff
 // Green = HTTP Allowed, Red = Redirected to HTTPS
 + http://{domain.tld}/alpha
