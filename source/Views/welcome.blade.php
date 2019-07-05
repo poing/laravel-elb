@@ -131,22 +131,16 @@
     $path = (isset($base_url['path'])) ? $base_url['path'] : null;
     $url = $base_url['scheme'] . '://' . $base_url['host'] . $path;
 
+    $uri = (isset($segment)) ? '' : 'unsecure';
+    $link = (isset($segment)) ? 'Home' : 'Unsecure';
+
 ?>
 
-
                 <div class="links m-b-md">
-                    <a href={{ $url }}>Try: {{ $base_url['scheme'] }} Version</a>
+                    <a href={{ url($uri) }}>{{ $link }} </a>
+                    <a href={{ $url }}>Try: {{ $base_url['scheme'] }}</a>
                 </div>
-
-                <div class="links m-b-md">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                
                 <div class="version">
                     {{ url()->current() }}
                 </div>
