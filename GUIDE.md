@@ -1,7 +1,8 @@
 # Elastic Beanstalk with HTTPS Quick Start Guide
 
 1. AWS Elastic Beanstalk
-    1. Certificate
+  * [Request a Certificate](https://console.aws.amazon.com/acm/)
+    
     1. ELB
     1. ELB LB
     1. done
