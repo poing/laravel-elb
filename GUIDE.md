@@ -3,7 +3,7 @@
 1. AWS Elastic Beanstalk
   * [Request a Certificate](https://console.aws.amazon.com/acm/)
     
-    1. ELB optional
+    1. ELB optional 12
     1. ELB LB
     1. done
 1. Laravel Project
