@@ -36,7 +36,9 @@
 
 ### Configure More Options
 
-![Configure More Options](images/04-ConfigureMoreOptions.png)
+
+<img src="images/04-ConfigureMoreOptions.png" width="300"/>
+ 
 
 ## Capacity
 
