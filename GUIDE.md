@@ -1,6 +1,20 @@
 # Elastic Beanstalk with HTTPS Quick Start Guide
 
-
+1. AWS Elastic Beanstalk
+  1. Certificate
+  1. ELB
+  1. ELB LB
+  1. done
+1. Laravel Project
+  1. poing/laravel-elb
+  1. artisan elb:install
+1. Version Control
+  1. git init
+  1. git add
+  1. git commit
+1. AWS CLI
+  1. eb init
+  1. 
 
 
 ---
