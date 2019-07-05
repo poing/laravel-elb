@@ -1,8 +1,26 @@
 # Elastic Beanstalk with HTTPS Quick Start Guide
 
-1. AWS Elastic Beanstalk
+* AWS Elastic Beanstalk
   * [Request a Certificate](https://console.aws.amazon.com/acm/)
-    
+  * Create New Application
+  * Create Environment
+    * Select environment tier
+      * Web server environment
+    * Create a web server environment
+      * Environment name
+      * Platform
+        * Preconfigured platform - PHP
+      * Configure More Options
+    * Modify Capacity
+      * Environment type: Load Balanced
+      * Save
+    * Modify Load Balancer
+      * Application Load Balancer
+        * Add Listener
+        * port 443, https, select certificate
+        
+    * 
+   
     1. ELB optional 12
     1. ELB LB
     1. done

@@ -65,7 +65,7 @@ Middleware included in this package *eliminates* the necessity of using `.ebexte
 
 It provides the *same* functionality as the [`https-redirect`](https://github.com/awsdocs/elastic-beanstalk-samples/blob/master/configuration-files/aws-provided/security-configuration/https-redirect/php/https-redirect-php.config) recommended in the AWS [documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-httpredirect.html), *and allows for custom paths to easily be excluded.*
 
-> The middleware is a result of *frustration* from trying to get the correct `RewriteCond` rules to **exclude** multiple conditions using the `.ebextensions` method.  Handling the `HTTP` to `HTTPS` redirection with Laravel provides more *flexibility* with less headaches.  *I was working with an application that could **not** fetch content from third party domains with HTTPS.*
+> The middleware is a result of *frustration* trying to get the correct `RewriteCond` rules to **exclude** multiple conditions using the `.ebextensions` method.  Handling the `HTTP` to `HTTPS` redirection with Laravel provides more *flexibility* with less headaches.  *I was working with an application that could **not** fetch content from third party domains with HTTPS.*
 
 * *This package **does not** prevent `HTTPS` access.*
 * *It **does not** redirect `HTTPS` to `HTTP`.*
