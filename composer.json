@@ -13,7 +13,8 @@
         }
     ],
     "require": {
-        "laravel/framework": ">=5.5"
+        "laravel/framework": ">=5.5",
+        "peppeocchi/laravel-elb-middleware": ">=3"
     },
     "suggest": {
         "ocramius/package-versions": "Provides package version for the sample view.",
