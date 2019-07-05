@@ -31,7 +31,7 @@
 
 ## Configure Web Server Environment
 
-<img src="images/03-CreateWebServerEnvironment.png" width="300"/>
+<img src="images/03-CreateWebServerEnvironment.png" width="400"/>
 
 
 ### Configure More Options
