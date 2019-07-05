@@ -37,7 +37,7 @@
 ### Configure More Options
 
 
-<img src="images/04-ConfigureMoreOptions.png" width="100"/>
+<img src="images/04-ConfigureMoreOptions.png" width="150"/>
  
 
 ## Capacity
