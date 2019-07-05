@@ -31,6 +31,18 @@
 
 ![Configure Web Server](images/03-CreateWebServerEnvironment.png)
 
+### Configure More Options
+
+![Configure More Options](images/04-ConfigureMoreOptions.png)
+
+## Capacity
+
+![](images/05-Capacity.png)
+
+### Modify Capacity
+
+![](images/06-ModifyCapacity.png)
+
 
     * 
    
