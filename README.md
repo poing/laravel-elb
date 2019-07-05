@@ -39,9 +39,9 @@ Once the package is installed, the following `artisan` commands will be availabl
   
 ## Recognizing Secure Requests
 
-The AWS Elastic Beanstalk environment uses a load balancer to serve `HTTPS` requests, while the Laravel application *actually* runs in an AWS Elastic Beanstalk environment that **only** supports `HTTP`.
+The AWS Elastic Beanstalk environment uses a Load Balancer to serve `HTTPS` requests, while the Laravel application *actually* runs in an AWS Elastic Beanstalk environment that **only** supports `HTTP`.
 
-This can cause the Laravel application to *represent* `HTTP` to helper methods that return `URL` information, since the Laravel application is **not aware** of the load balancer.
+This can cause the Laravel application to *represent* `HTTP` to helper methods that return `URL` information, since the Laravel application is **not aware** of the Load Balancer.
 
 ###### Incorrect Response:
 ```php
