@@ -22,16 +22,17 @@
 ## Create New Application    
 
 
-<img src="images/01-CreateNewApplication.png" width="200"/>
+<img src="images/01-CreateNewApplication.png" width="300"/>
 
 
 ## Select Web Server Environment
 
-![Web Server Environment](images/02-WebServerEnvironment.png)
+<img src="images/02-WebServerEnvironment.png" width="300"/>
 
 ## Configure Web Server Environment
 
-![Configure Web Server](images/03-CreateWebServerEnvironment.png)
+<img src="images/03-CreateWebServerEnvironment.png" width="300"/>
+
 
 ### Configure More Options
 
