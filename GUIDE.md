@@ -18,9 +18,19 @@
       * Application Load Balancer
         * Add Listener
         * port 443, https, select certificate
-        
 
-![01](images/01-CreateNewApplication.png)
+## Create New Application    
+
+![Create New Application](images/01-CreateNewApplication.png)
+
+## Select Web Server Environment
+
+![Web Server Environment](images/02-WebServerEnvironment.png)
+
+## Configure Web Server Environment
+
+![Configure Web Server](images/03-CreateWebServerEnvironment.png)
+
 
     * 
    
