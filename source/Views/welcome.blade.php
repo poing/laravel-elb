@@ -135,7 +135,7 @@
 
 
                 <div class="links m-b-md">
-                    <a href={{ $url }}>Try: {{ $base_url['scheme'] }}</a>
+                    <a href={{ $url }}>Try: {{ $base_url['scheme'] }} Version</a>
                 </div>
 
                 <div class="links m-b-md">
@@ -148,7 +148,7 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
                 <div class="version">
-                    {{ url('/') }}
+                    {{ url()->current() }}
                 </div>
                 <div class="version">
                     Laravel Version: {{ app()->version() }}
