@@ -21,7 +21,9 @@
 
 ## Create New Application    
 
-![Create New Application](images/01-CreateNewApplication.png)
+
+<img src="images/01-CreateNewApplication.png" width="200"/>
+
 
 ## Select Web Server Environment
 
