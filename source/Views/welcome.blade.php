@@ -128,7 +128,8 @@
     
     $base_url = parse_url(url()->current());
     $base_url['scheme'] = ($base_url['scheme'] == 'http') ? 'https' : 'http';
-    $url = $base_url['scheme'] . '://' . $base_url['host'] . $base_url['path'];
+    $path = (isset($base_url['path'])) ? $base_url['path'] : null;
+    $url = $base_url['scheme'] . '://' . $base_url['host'] . $path;
 
 ?>
 

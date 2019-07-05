@@ -2,6 +2,10 @@
     "name": "poing/laravel-elb",
     "description": "Essentials for Laravel on AWS Elastic Beanstalk with HTTPS",
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/poing/laravel-elb/issues",
+        "source": "https://github.com/poing/laravel-elb"
+    },
     "authors": [
         {
             "name": "Brian LaVallee",
