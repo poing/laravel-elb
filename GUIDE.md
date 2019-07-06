@@ -4,7 +4,7 @@ This document assumes you already have an Elastic Beanstalk environment that sup
 
 * Valid domain name
 * Valid certificate associated with the [AWS Certificate Manager](https://console.aws.amazon.com/acm/)
-* [Elastic Beanstak Environment](https://console.aws.amazon.com/elasticbeanstalk/)
+* [Elastic Beanstak Environment](https://console.aws.amazon.com/elasticbeanstalk/) with a [`HTTPS` Listener](ELB.md) Configured 
 
 * AWS Elastic Beanstalk
   * [Request a Certificate](https://console.aws.amazon.com/acm/)
