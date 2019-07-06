@@ -68,13 +68,13 @@ Open your site in a browser.
 
 The sample view, *included with the package*, demonstrates `HTTP` to `HTTPS` redirection and *exceptions*.
 
-#### 10. Publish `config/laravel-elb` to Your Laravel Application
+#### 10. Publish `config/laravel-elb.php` to Your Laravel Application
 
 To **disable** the sample view, run `elb:publish` and modify the configuration for your Laravel application.
 
 ```sh
 php artisan elb:publish
-git add config/laravel-elb
+git add config/laravel-elb.php
 git commit -am "Disable sample view"
 eb deploy
 ```
