@@ -41,7 +41,7 @@ Once the package is installed, the following `artisan` commands will be availabl
 
 Middleware included in this package *eliminates* the necessity of using `.ebextensions` to handle `HTTP` to `HTTPS` redirection with the Apache `RewriteEngine` method.  While allowing *some* traffic **not** to be redirected, *such as the Elastic Beanstalk HealthChecker*.
 
-`HTTP` to `HTTPS` Redirection **does not**:
+`HTTP` to `HTTPS` Redirection **does not** occur is *any* for the following conditions are met.
 
 * Elastic Beanstalk HealthChecker
 * `APP_ENV=local`
