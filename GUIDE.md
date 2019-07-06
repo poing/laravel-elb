@@ -26,6 +26,10 @@ composer require czproject/git-php ocramius/package-versions poing/laravel-elb
 php artisan elb:install
 ```
 
+4. Customize Configuration - *optional*
+
+Modify `.env.aws` and `.ebextensions` files 
+
 
 
 
