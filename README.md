@@ -81,8 +81,8 @@ You *may* choose to use the `.ebextensions` method, it *should not* affect this 
 // Green = HTTP Allowed, Red = Redirected to HTTPS
 + http://{domain.tld}/unsecure
 + http://{domain.tld}/unsecure/your/web/route
-- https://{domain.tld}/
-- https://{domain.tld}/other
+- http://{domain.tld}/
+- http://{domain.tld}/other
 ```
 
 #### Configuration
@@ -108,10 +108,10 @@ php artisan elb:publish
 // Green = HTTP Allowed, Red = Redirected to HTTPS
 + http://{domain.tld}/alpha
 + http://{domain.tld}/alpha/any/path
-- https://{domain.tld}/bravo
+- http://{domain.tld}/bravo
 + http://{domain.tld}/bravo/charlie
 + http://{domain.tld}/bravo/charlie/any/path
-- https://{domain.tld}/bravo/any
+- http://{domain.tld}/bravo/any
 ```
 
 ##### Strict Mode
@@ -126,11 +126,11 @@ php artisan elb:publish
 ```diff
 // Green = HTTP Allowed, Red = Redirected to HTTPS
 + http://{domain.tld}/alpha
-- https://{domain.tld}/alpha/any/path
-- https://{domain.tld}/bravo
+- http://{domain.tld}/alpha/any/path
+- http://{domain.tld}/bravo
 + http://{domain.tld}/bravo/charlie
-- https://{domain.tld}/bravo/charlie/any/path
-- https://{domain.tld}/bravo/any
+- http://{domain.tld}/bravo/charlie/any/path
+- http://{domain.tld}/bravo/any
 ```
 
 ## Recognizing Secure Requests
