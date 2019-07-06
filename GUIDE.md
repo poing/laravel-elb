@@ -34,6 +34,8 @@ Modify `.env.aws` and `.ebextensions` files *as needed*.
 
 **YOU MUST USE VERSION CONTROL FOR `eb deply` TO WORK PROPERLY!**
 
+The `eb cli` will **not** properly deploy *all* files, without version control.
+
 ```sh
 git init
 git add .
