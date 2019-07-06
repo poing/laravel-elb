@@ -1,48 +1,10 @@
 # Elastic Beanstalk with HTTPS Quick Start Guide
 
-This document assumes you have an **working** Elastic Beanstalk environment that supports `HTTPS`.  *Tested using the Sample application.*
-
+> This document assumes you have an **working** Elastic Beanstalk environment that supports `HTTPS`.  *Tested using the Sample application.*
+>
 > A working setup *typically* includes a domain, `CNAME` record, [certificate](https://console.aws.amazon.com/acm/), [ELB environment](https://console.aws.amazon.com/elasticbeanstalk/), [`HTTPS` listener](ELB.md), and the *appropiate* ELB/RDS [security group](https://console.aws.amazon.com/ec2/v2/#SecurityGroups) rules.
 
 
-
-* AWS Elastic Beanstalk
-  * [Request a Certificate](https://console.aws.amazon.com/acm/)
-  * Create New Application
-  * Create Environment
-    * Select environment tier
-      * Web server environment
-    * Create a web server environment
-      * Environment name
-      * Platform
-        * Preconfigured platform - PHP
-      * Configure More Options
-    * Modify Capacity
-      * Environment type: Load Balanced
-      * Save
-    * Modify Load Balancer
-      * Application Load Balancer
-        * Add Listener
-        * port 443, https, select certificate
-
-
-
-
-    * 
-   
-    1. ELB optional 12
-    1. ELB LB
-    1. done
-1. Laravel Project
-    1. poing/laravel-elb
-    1. artisan elb:install
-1. Version Control
-    1. git init
-    1. git add
-    1. git commit
-1. AWS CLI
-    1. eb init
-    1. 
 
 
 ---
