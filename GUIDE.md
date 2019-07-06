@@ -26,7 +26,7 @@ composer require czproject/git-php ocramius/package-versions poing/laravel-elb
 php artisan elb:install
 ```
 
-#### 4. Customize Your Laravel Application - *optional*
+#### 4. Customize Deployment for Your Laravel Application - *optional*
 
 Modify `.env.aws` and `.ebextensions` files **as needed**.
 
