@@ -44,7 +44,7 @@ git commit -am "Initial Commit"
 
 6. Initialize Elastic Beanstalk with `eb cli`
 
-Environment settings that are **not** stored in `.env.aws` *may* be configured with `eb setenv` or inside the [ELB Environment](https://console.aws.amazon.com/elasticbeanstalk/).
+Environment settings that are **not** stored in `.env.aws` *may* be configured with `eb setenv` or inside the [AWS console](https://console.aws.amazon.com/elasticbeanstalk/).
 
 ```sh
 eb init
@@ -57,37 +57,6 @@ eb setenv APP_KEY= APP_NAME= DB_HOST= DB_DATABASE= DB_USERNAME= DB_PASSWORD=
 eb deploy
 ```
 
+8. Visit Site
 
-`psr-4` autoload *-and-* automatic registration of the `ServiceProvider` handles loading the middleware *automatically*.  
-
-*No additional steps are necessary.  **Except** on the [Elastic Beanstalk Load Balancer](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-elb.html) side.* 
-
----
-
-
-
-
-
-## Installation
-You can install this package using [Composer](https://getcomposer.org/)
-```
-composer require poing/laravel-elb
-```
-
-`psr-4` autoload *-and-* automatic registration of the `ServiceProvider` handle loading the middleware *automatically*.  
-
-*No additional steps are necessary.  **Except** on the [Elastic Beanstalk Load Balancer](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-elb.html) side.* 
-
-## Usage
-
-`HTTPS` redirection will be *disabled* when the Laravel `APP_ENV` is set to `local`.
-
-```
-APP_ENV=local  // HTTPS Redirection Disabled
-```
-
-## Configuration
-
-## .ebextensions
-
-**YOU MUST USE GIT FOR `eb deply` TO WORK PROPERLY!**
+Open the site in a browser.
