@@ -4,15 +4,15 @@ The package provides the *essential* elements for a Laravel app running on AWS E
 
 It provides the following:
 
-* Middleware to recognize **secure** requests
-* Middleware for HTTP to HTTPS redirection
-  * *Includes the ability to configure exceptions to the HTTPS redirection*
 * Environment Configuration Files `.ebextensions` for Deployment 
   * Set the document root to `/public`
   * *Example* showing how to read environment configuration variables
   * Copy `.env.aws` to `.env`
   * Run `artisan` commands
   * *How to* install and run `npm` commands
+* Middleware for HTTP to HTTPS redirection
+  * *Includes the ability to configure exceptions to the HTTPS redirection*
+* Middleware to recognize **secure** requests
 
 ## Elastic Beanstalk with HTTPS Quick Start Guide
 
@@ -29,34 +29,13 @@ composer require czproject/git-php ocramius/package-versions poing/laravel-elb
 composer require poing/laravel-elb
 ```
 
-#### `artisan` Commands
+#### Commands:
 Once the package is installed, the following `artisan` commands will be available in your Laravel application:
 
 * **`elb:install`**: Add `.ebextensions` directory and `.env.aws` to the Laravel application.
 * **`elb:publish`**: Add `config/laravel-elb.php` to the Laravel application, to allow HTTPS redirection customization.
   * This will **disable** the *sample* `view` included with the package.
   
-## Recognizing Secure Requests
-
-The AWS Elastic Beanstalk environment uses a Load Balancer to serve `HTTPS` requests, while the Laravel application *actually* runs in an AWS Elastic Beanstalk environment that **only** supports `HTTP`.
-
-This can cause the Laravel application to *represent* `HTTP` to helper methods that return `URL` information, since the Laravel application is **not aware** of the Load Balancer.
-
-###### Incorrect Response:
-```php
-// https://domain.tld
-url()->current(); // Returns: 'http://domain.tld'
-```
-
-This package uses [`peppeocchi/laravel-elb-middleware`](https://github.com/peppeocchi/laravel-elb-middleware) to *simplify* using `HTTPS` with your Laravel application on AWS Elastic Beanstalk.  Ensuring that your Laravel application will correctly recognize **secure** requests when running on Elastic Beanstalk with a Load Balancer.  *Allowing helper methods that return `URL` information, to represent the correct protocol `scheme`.*
-
-###### Correct Response:
-```php
-// https://domain.tld
-url()->current(); // Returns: 'https://domain.tld'
-```
-
-This middleware is *based* on a [gist](https://gist.github.com/peppeocchi/4f522663d7e88029daeba833c835df3d) by [Giuseppe Occhipinti](https://github.com/peppeocchi) that does the exact same thing.
 
 ## HTTP to HTTPS Redirection
 
@@ -130,6 +109,27 @@ php artisan elb:publish
 - https://{domain.tld}/bravo/any
 ```
 
+## Recognizing Secure Requests
+
+The AWS Elastic Beanstalk environment uses a Load Balancer to serve `HTTPS` requests, while the Laravel application *actually* runs in an AWS Elastic Beanstalk environment that **only** supports `HTTP`.
+
+This can cause the Laravel application to *represent* `HTTP` to helper methods that return `URL` information, since the Laravel application is **not aware** of the Load Balancer.
+
+###### Incorrect Response:
+```php
+// https://domain.tld
+url()->current(); // Returns: 'http://domain.tld'
+```
+
+This package uses [`peppeocchi/laravel-elb-middleware`](https://github.com/peppeocchi/laravel-elb-middleware) to *simplify* using `HTTPS` with your Laravel application on AWS Elastic Beanstalk.  Ensuring that your Laravel application will correctly recognize **secure** requests when running on Elastic Beanstalk with a Load Balancer.  *Allowing helper methods that return `URL` information, to represent the correct protocol `scheme`.*
+
+###### Correct Response:
+```php
+// https://domain.tld
+url()->current(); // Returns: 'https://domain.tld'
+```
+
+This middleware is *based* on a [gist](https://gist.github.com/peppeocchi/4f522663d7e88029daeba833c835df3d) by [Giuseppe Occhipinti](https://github.com/peppeocchi) that does the exact same thing.
 
 
 
