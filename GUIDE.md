@@ -78,3 +78,11 @@ git add config/laravel-elb.php
 git commit -am "Disable sample view"
 eb deploy
 ```
+
+#### 11. Create, Commit, and Deploy
+
+```sh
+git add {any new files}
+git commit -am "Changes to Your Application"
+eb deploy
+```
