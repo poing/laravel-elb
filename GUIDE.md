@@ -9,17 +9,21 @@
 1. Create your Laravel Application
 
 ```sh
-laravel new my-project
-# -or
 composer create-project --prefer-dist laravel/laravel my-project
 cd my-project
 
 ```
 
+2. Install `poing/laravel-elb` and the *suggested* packages
+
 ```sh
-composer require poing/laravel-elb
+composer require czproject/git-php ocramius/package-versions poing/laravel-elb
+```
+
+3. Install the essential elements for Elastic Beanstalk
+
+```sh
 php artisan elb:install
-php artisan elb:publish; # optional
 ```
 
 
