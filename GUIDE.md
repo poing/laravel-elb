@@ -2,7 +2,7 @@
 
 This document assumes you have an **working** Elastic Beanstalk environment that supports `HTTPS`.  *Tested using the Sample application.*
 
-Including a domain name, [certificate](https://console.aws.amazon.com/acm/), [ELB environment](https://console.aws.amazon.com/elasticbeanstalk/), [`HTTPS` listener](ELB.md), and the *appropiate* [security group](https://console.aws.amazon.com/ec2/v2/#SecurityGroups) rules.
+A domain, nameserver, `CNAME` recored, [certificate](https://console.aws.amazon.com/acm/), [ELB environment](https://console.aws.amazon.com/elasticbeanstalk/), [`HTTPS` listener](ELB.md), and the *appropiate* [security group](https://console.aws.amazon.com/ec2/v2/#SecurityGroups) rules.
 
 
 
