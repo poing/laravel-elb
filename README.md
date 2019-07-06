@@ -38,7 +38,7 @@ Once the package is installed, the following `artisan` commands will be availabl
   
 ## Elastic Beanstalk Configuration Files
 
-The AWS Elastic Beanstalk configuration files (.ebextensions) configure the environment and customize the AWS resources that it contains.
+This package provides Elastic Beanstalk configuration files (.ebextensions) to configure the environment, customize the AWS resources, and perform Laravel tasks.
 
 ```
 .ebextensions/10-document-root.config
