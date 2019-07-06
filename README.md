@@ -41,10 +41,10 @@ Once the package is installed, the following `artisan` commands will be availabl
 
 Middleware included in this package *eliminates* the necessity of using `.ebextensions` to handle `HTTP` to `HTTPS` redirection with the Apache `RewriteEngine` method.  While allowing *some* traffic **not** to be redirected, *such as the Elastic Beanstalk HealthChecker*.
 
-Redirection **does not** occur fi *any* of the following conditions are met:
+Redirection **does not** occur if *any* of the following conditions are met:
 
 * The `User-Agent` is the Elastic Beanstalk HealthChecker
-* `APP_ENV=local`
+* The Application Environment `APP_ENV` is set to `local`
 * The `URL` matches the `exclude` configuration settings
 
 It provides the *same* functionality as the [`https-redirect`](https://github.com/awsdocs/elastic-beanstalk-samples/blob/master/configuration-files/aws-provided/security-configuration/https-redirect/php/https-redirect-php.config) recommended in the AWS [documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-httpredirect.html), *and allows for custom paths to easily be excluded.*
