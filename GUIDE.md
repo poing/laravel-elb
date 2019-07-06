@@ -1,5 +1,11 @@
 # Elastic Beanstalk with HTTPS Quick Start Guide
 
+This document assumes you already have an Elastic Beanstalk environment that supports `HTTPS`.
+
+* Valid domain name
+* Valid certificate associated with the [AWS Certificate Manager](https://console.aws.amazon.com/acm/)
+* [Elastic Beanstak Environment](https://console.aws.amazon.com/elasticbeanstalk/)
+
 * AWS Elastic Beanstalk
   * [Request a Certificate](https://console.aws.amazon.com/acm/)
   * Create New Application
@@ -19,43 +25,7 @@
         * Add Listener
         * port 443, https, select certificate
 
-## Create New Application    
 
-
-<img src="images/01-CreateNewApplication.png" width="300"/>
-
-
-## Select Web Server Environment
-
-<img src="images/02-WebServerEnvironment.png" width="300"/>
-
-## Configure Web Server Environment
-
-<img src="images/03-CreateWebServerEnvironment.png" width="500"/>
-
-
-### Configure More Options
-
-
-<img src="images/04-ConfigureMoreOptions.png" width="150"/>
- 
-
-## Capacity
-
-
-<img src="images/05-Capacity.png" width="300"/>
-
-### Modify Capacity
-
-<img src="images/06-ModifyCapacity.png" width="500"/>
-
-## Load Balancer
-
-<img src="images/07-LoadBalancer.png" width="300"/>
-
-## Add Listener
-
-<img src="images/08-AddListener.png" width="500"/>
 
 
     * 
