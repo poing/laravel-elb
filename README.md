@@ -35,6 +35,10 @@ Once the package is installed, the following `artisan` commands will be availabl
 * **`elb:install`**: Add `.ebextensions` directory and `.env.aws` to the Laravel application.
 * **`elb:publish`**: Add `config/laravel-elb.php` to the Laravel application, to allow HTTPS redirection customization.
   * This will **disable** the *sample* `route` and `view` included with the package.
+  
+## AWS Elastic Beanstalk Environment Configuration Files
+
+AWS Elastic Beanstalk configuration files (.ebextensions) configure the ELB environment and customize the AWS resources that it contains.
 
 ## HTTP to HTTPS Redirection
 
