@@ -48,12 +48,9 @@ This package provides Elastic Beanstalk configuration files (.ebextensions) to c
 .ebextensions/50-node-npm-gulp.config
 ```
 
-These provide the **basic** requirements for deploying Laravel to Elastic Beanstalk.  File naming is to allow inserting your own.
+These provide the **basic** requirements for deploying Laravel to Elastic Beanstalk.  Files are named to allow you to create your own files *within* the processing order.
 
-> If you think something is missing, something *could* be done better, please submit a pull request.
-
-
-
+> If you think something is missing, something *could* be done better, feel free to submit a pull request.
 
 ## HTTP to HTTPS Redirection
 
