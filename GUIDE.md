@@ -43,19 +43,19 @@
 ## Capacity
 
 
-<img src="images/05-Capacity.png" width="150"/>
+<img src="images/05-Capacity.png" width="300"/>
 
 ### Modify Capacity
 
-<img src="images/06-ModifyCapacity.png" width="150"/>
+<img src="images/06-ModifyCapacity.png" width="500"/>
 
 ## Load Balancer
 
-<img src="images/07-LoadBalancer.png" width="150"/>
+<img src="images/07-LoadBalancer.png" width="300"/>
 
 ## Add Listener
 
-<img src="images/08-AddListener.png" width="150"/>
+<img src="images/08-AddListener.png" width="500"/>
 
 
     * 
