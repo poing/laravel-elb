@@ -42,11 +42,20 @@
 
 ## Capacity
 
-![](images/05-Capacity.png)
+
+<img src="images/05-Capacity.png" width="150"/>
 
 ### Modify Capacity
 
-![](images/06-ModifyCapacity.png)
+<img src="images/06-ModifyCapacity.png" width="150"/>
+
+## Load Balancer
+
+<img src="images/07-LoadBalancer.png" width="150"/>
+
+## Add Listener
+
+<img src="images/08-AddListener.png" width="150"/>
 
 
     * 
