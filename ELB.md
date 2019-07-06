@@ -1,3 +1,5 @@
+# Setting up the Elastic Beanstalk Load Balancer
+
 ## Create New Application    
 
 <img src="images/01-CreateNewApplication.png" width="300"/>
