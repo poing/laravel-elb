@@ -1,6 +1,6 @@
 # Elastic Beanstalk with HTTPS Quick Start Guide
 
-This document assumes you already have an Elastic Beanstalk environment that supports `HTTPS`.
+This document assumes you have an **working** Elastic Beanstalk environment that supports `HTTPS`.  *Tested using the Sample application.*
 
 1. Valid domain name
 1. Valid certificate associated with the [AWS Certificate Manager](https://console.aws.amazon.com/acm/)
