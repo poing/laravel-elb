@@ -6,7 +6,7 @@
 
 ### Starting from Scratch
 
-1. Create your Laravel Application
+#### 1. Create your Laravel Application
 
 ```sh
 composer create-project --prefer-dist laravel/laravel my-project
@@ -14,13 +14,13 @@ cd my-project
 
 ```
 
-2. Install `poing/laravel-elb` and the *suggested* packages
+#### 2. Install `poing/laravel-elb` and the *suggested* packages
 
 ```sh
 composer require czproject/git-php ocramius/package-versions poing/laravel-elb
 ```
 
-3. Install the essential elements to support deployment to Elastic Beanstalk
+#### 3. Install the essential elements to support deployment to Elastic Beanstalk
 
 ```sh
 php artisan elb:install
