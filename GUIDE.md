@@ -44,19 +44,26 @@ git commit -am "Initial Commit"
 
 #### 6. Initialize Elastic Beanstalk with `eb cli`
 
-Environment settings that are **not** stored in `.env.aws` *may* be configured with `eb setenv` or inside the [AWS console](https://console.aws.amazon.com/elasticbeanstalk/).
-
 ```sh
 eb init
+```
+
+#### 7. Additional Environment Settings - *optional*
+
+Environment settings that are **not** stored in `.env.aws` *may* be configured with `eb setenv` or using the [ELB console](https://console.aws.amazon.com/elasticbeanstalk/).
+
+```sh
 eb setenv APP_KEY= APP_NAME= DB_HOST= DB_DATABASE= DB_USERNAME= DB_PASSWORD=
 ```
 
-#### 7. Deploy to Elastic Beanstalk
+
+
+#### 8. Deploy to Elastic Beanstalk
 
 ```sh
 eb deploy
 ```
 
-#### 8. Visit Site
+#### 9. Visit Site
 
 Open the site in a browser.
