@@ -20,17 +20,17 @@ cd my-project
 composer require czproject/git-php ocramius/package-versions poing/laravel-elb
 ```
 
-#### 3. Install the essential elements to support deployment to Elastic Beanstalk
+#### 3. Install *Essential* Elements to Support Elastic Beanstalk
 
 ```sh
 php artisan elb:install
 ```
 
-4. Customize Laravel the Application - *optional*
+#### 4. Customize Your Laravel Application - *optional*
 
 Modify `.env.aws` and `.ebextensions` files *as needed*.
 
-5. Version Control
+#### 5. Version Control
 
 **YOU MUST USE VERSION CONTROL FOR `eb deply` TO WORK PROPERLY!**
 
@@ -42,7 +42,7 @@ git add .
 git commit -am "Initial Commit"
 ```
 
-6. Initialize Elastic Beanstalk with `eb cli`
+#### 6. Initialize Elastic Beanstalk with `eb cli`
 
 Environment settings that are **not** stored in `.env.aws` *may* be configured with `eb setenv` or inside the [AWS console](https://console.aws.amazon.com/elasticbeanstalk/).
 
@@ -51,12 +51,12 @@ eb init
 eb setenv APP_KEY= APP_NAME= DB_HOST= DB_DATABASE= DB_USERNAME= DB_PASSWORD=
 ```
 
-7. Deploy to Elastic Beanstalk
+#### 7. Deploy to Elastic Beanstalk
 
 ```sh
 eb deploy
 ```
 
-8. Visit Site
+#### 8. Visit Site
 
 Open the site in a browser.
