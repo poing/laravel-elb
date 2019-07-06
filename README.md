@@ -62,7 +62,7 @@ Redirection **does not** occur for ***any*** of the following conditions:
 * The Application Environment `APP_ENV` is set to `local`
 * The `URI` matches the `exclude` configuration settings
 
-It provides the *same* functionality as the [`https-redirect`](https://github.com/awsdocs/elastic-beanstalk-samples/blob/master/configuration-files/aws-provided/security-configuration/https-redirect/php/https-redirect-php.config) recommended in the AWS [documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-httpredirect.html), *and allows for custom paths to easily be excluded.*
+It provides the *same* functionality as the [`https-redirect`](https://github.com/awsdocs/elastic-beanstalk-samples/blob/master/configuration-files/aws-provided/security-configuration/https-redirect/php/https-redirect-php.config) recommended in the AWS [documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-httpredirect.html), *and allows for custom paths to easily be excluded.*  You *may* choose to use the `.ebextensions` methods, it *should not* affect this middleware.
 
 > The middleware is a result of *frustration* trying to get the correct `RewriteCond` rules to **exclude** multiple conditions using the `.ebextensions` method.  Handling the `HTTP` to `HTTPS` redirection with Laravel provides more *flexibility* with less headaches.  *I was working with an application that could **not** fetch content from third party domains with HTTPS.*
 
