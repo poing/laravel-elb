@@ -4,7 +4,7 @@
 >
 > A working setup *typically* includes a domain, `CNAME` record, [certificate](https://console.aws.amazon.com/acm/), [ELB environment](https://console.aws.amazon.com/elasticbeanstalk/), `HTTPS` listener [configured](ELB.md), and the *appropiate* ELB/RDS [security group](https://console.aws.amazon.com/ec2/v2/#SecurityGroups) rules.
 
-### Starting from Scratch
+### Step-by-Step
 
 #### 1. Create your Laravel Application
 

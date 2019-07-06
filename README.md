@@ -16,8 +16,7 @@ It provides the following:
 
 ## Elastic Beanstalk with HTTPS Quick Start Guide
 
-[Quick Start](GUIDE.md)
-
+Here are some [Step-by-Step](GUIDE.md) instructions to deploy a *new* Laravel application to AWS Elastic Beanstalk.
 
 ## Installation
 
