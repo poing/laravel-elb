@@ -65,3 +65,5 @@ eb deploy
 #### 9. Visit Site
 
 Open your site in a browser.
+
+The *sample* view, *included with the package*, demonstrates `HTTP` to `HTTPS` redirection and *exceptions*.
