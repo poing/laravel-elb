@@ -45,7 +45,7 @@ Redirection **does not** occur if *any* of the following conditions are met:
 
 * The `User-Agent` is the Elastic Beanstalk HealthChecker
 * The Application Environment `APP_ENV` is set to `local`
-* The `URL` matches the `exclude` configuration settings
+* The `URI` matches the `exclude` configuration settings
 
 It provides the *same* functionality as the [`https-redirect`](https://github.com/awsdocs/elastic-beanstalk-samples/blob/master/configuration-files/aws-provided/security-configuration/https-redirect/php/https-redirect-php.config) recommended in the AWS [documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-httpredirect.html), *and allows for custom paths to easily be excluded.*
 
