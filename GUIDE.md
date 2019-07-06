@@ -74,4 +74,7 @@ To **disable** the sample view, run `elb:publish` and modify the configuration f
 
 ```sh
 php artisan elb:publish
+git add config/laravel-elb
+git commit -am "Disable sample view"
+eb deploy
 ```
