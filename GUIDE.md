@@ -2,11 +2,9 @@
 
 This document assumes you have an **working** Elastic Beanstalk environment that supports `HTTPS`.  *Tested using the Sample application.*
 
-- Valid domain name
-- Valid certificate associated with the [AWS Certificate Manager](https://console.aws.amazon.com/acm/)
-- [Elastic Beanstak Environment](https://console.aws.amazon.com/elasticbeanstalk/) with a [`HTTPS` Listener](ELB.md) Configured 
-- Open Ports
-- Database
+Configure requires a domain name, [certificate](https://console.aws.amazon.com/acm/), [ELB environment(https://console.aws.amazon.com/elasticbeanstalk/), [`HTTPS` listener](ELB.md), and the *appropiate* [security group](https://console.aws.amazon.com/ec2/v2/#SecurityGroups) rules.
+
+
 
 * AWS Elastic Beanstalk
   * [Request a Certificate](https://console.aws.amazon.com/acm/)
