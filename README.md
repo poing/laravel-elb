@@ -10,6 +10,7 @@ It provides the following:
   * Copy `.env.aws` to `.env`
   * Run `artisan` commands
   * *How to* install and run `npm` commands
+* `defaultStringLength()` for MariaDB or Auroa
 * Middleware for HTTP to HTTPS redirection
   * *Includes the ability to configure exceptions to the HTTPS redirection*
 * Middleware to recognize **secure** requests
@@ -52,6 +53,19 @@ These provide the **basic** requirements for deploying Laravel to Elastic Beanst
 
 > If you think something is missing, something *could* be done better, feel free to submit a pull request.  
 >*Except for `HTTP` to `HTTPS` redirect, see the next section for an explanation.*
+
+## MariaDB or Auroa
+
+Because I *often* use Auroa or MarieDB, instead of MySQL.  I added the *fix* for *non-*MySQL Databases.  
+
+```php
+        Schema::defaultStringLength(191);
+```
+
+> Laravel 5.4 made a change to the default database character set, and it’s now utf8mb4 which includes support for storing emojis. This only affects new applications and as long as you are running MySQL v5.7.7 and higher you do not need to do anything.
+
+While AWS does provide a higher version of MySQL.  Aurora (*MySQL Compatabe*), but it does not support the higher string length.
+
 
 ## HTTP to HTTPS Redirection
 
