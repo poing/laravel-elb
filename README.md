@@ -56,15 +56,15 @@ These provide the **basic** requirements for deploying Laravel to Elastic Beanst
 
 ## MariaDB or Auroa
 
-Because I *often* use Auroa or MarieDB, instead of MySQL.  I added the *fix* for *non-*MySQL Databases.  
+Because I *often* use Auroa or MarieDB, instead of MySQL.  I added the *fix* for non-MySQL Databases.  
 
 ```php
-        Schema::defaultStringLength(191);
+Schema::defaultStringLength(191);
 ```
 
 > Laravel 5.4 made a change to the default database character set, and it’s now utf8mb4 which includes support for storing emojis. This only affects new applications and as long as you are running MySQL v5.7.7 and higher you do not need to do anything.
 
-While AWS does provide a higher version of MySQL.  Aurora (*MySQL Compatabe*), but it does not support the higher string length.
+While AWS does provide a higher version of MySQL.  Aurora (*MySQL Compatabe*), does **not** support the increased string length. *yet*
 
 
 ## HTTP to HTTPS Redirection
